@@ -8,7 +8,7 @@ import java.util.*;
  * 만약 반대로 (o2.getValue()).compareTo(o1.getValue)로 쓸 경우에는 내림차순이 된다.
  */
 
-public class sortByValue_hashMap {
+public class SortByValue_hashMap {
     public static HashMap<String, Integer> sortByValue(HashMap<String, Integer> hm) {
         List<Map.Entry<String, Integer>> list = new LinkedList<>(hm.entrySet());
 
