@@ -15,7 +15,6 @@ public class CorrectParenthesis {
                 else stack.pop();
             }
         }
-
         if (!stack.isEmpty()) answer = false;
 
         return answer;
