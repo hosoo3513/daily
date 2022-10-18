@@ -21,7 +21,6 @@ public class DoublePriorityQueue {
                 tm.remove(tm.firstKey());
             }
         }
-
         if (tm.size() >= 2) {
             answer[0] = tm.lastKey();
             answer[1] = tm.firstKey();
