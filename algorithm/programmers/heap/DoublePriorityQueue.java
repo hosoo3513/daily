@@ -28,8 +28,6 @@ public class DoublePriorityQueue {
         } else if (tm.size() == 1) {
             answer[0] = tm.firstKey();
             answer[1] = tm.firstKey();
-        } else {
-
         }
 
         return answer;
