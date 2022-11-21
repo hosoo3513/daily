@@ -44,6 +44,5 @@ public class MakeNumber {
         MakeNumber M = new MakeNumber();
         System.out.println(M.solution("9876543210", 4));
         System.out.println(M.solution("4177252841", 4));
-
     }
 }
