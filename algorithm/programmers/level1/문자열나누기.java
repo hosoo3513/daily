@@ -9,11 +9,12 @@ public class 문자열나누기 {
         char[] chars = s.toCharArray();
         int a = 0;
 
-        while (a < s.length()) {
+        while (a<s.length()) {
             HashMap<Character, Integer> map = new HashMap<>();
             map.put(chars[a], map.getOrDefault(chars[a], 0) + 1);
 
             int tmp = 0;
+            int cnt = answer;
 
             for (int i = a + 1; i < chars.length; i++) {
                 if (chars[i] == chars[a]) {
@@ -28,7 +29,10 @@ public class 문자열나누기 {
                     break;
                 }
             }
-
+            if (answer == cnt) {
+                answer++;
+                break;
+            }
         }
 
         return answer;
@@ -36,6 +40,6 @@ public class 문자열나누기 {
 
     public static void main(String[] args) {
         문자열나누기 m = new 문자열나누기();
-        System.out.println(m.solution("abracadabra"));
+        System.out.println(m.solution("aaabbaccccabba"));
     }
 }
