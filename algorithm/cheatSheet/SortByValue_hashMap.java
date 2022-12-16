@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * hashMap에서 value값 기준으로 정렬해야할 때 쓴다.
  * override 부분에서 return (o1.getValue()).compareTo(o2.getValue)로 비교하게 되면 오름차순이다.
- * 만약 반대로 (o2.getValue()).compareTo(o1.getValue)로 쓸 경우에는 내림차순이 된다.
+ * 만약 반대로 (o2.getValue()).compareTo(o1.getValue())로 쓸 경우에는 내림차순이 된다.
  */
 
 public class SortByValue_hashMap {
