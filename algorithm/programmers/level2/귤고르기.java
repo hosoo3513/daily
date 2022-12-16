@@ -11,37 +11,19 @@ public class 귤고르기 {
             map.put(tangerine[i], map.getOrDefault(tangerine[i], 0) + 1);
         }
 
-        sortByValue(map);
+        int[] arrays = map.values().stream().sorted(Collections.reverseOrder()).mapToInt(i -> i).toArray();
 
-        int a = 0;
-
-        while (k>0) {
+        for (int i = 0; i < arrays.length; i++) {
             answer++;
-            k = k - map.;
-            a++;
+            k -= arrays[i];
+            if (k <= 0) {
+                break;
+            }
         }
 
         return answer;
     }
-
-    public static HashMap<Integer, Integer> sortByValue(HashMap<Integer, Integer> hm) {
-        List<Map.Entry<Integer, Integer>> list = new LinkedList<>(hm.entrySet());
-
-        // 오름차순
-        Collections.sort(list, new Comparator<Map.Entry<Integer, Integer>>() {
-            @Override
-            public int compare(Map.Entry<Integer, Integer> o1, Map.Entry<Integer, Integer> o2) {
-                return (o2.getValue()).compareTo(o1.getValue());
-            }
-        });
-
-        HashMap<Integer, Integer> tmp = new LinkedHashMap<Integer, Integer>();
-        for (Map.Entry<Integer, Integer> aa : list) {
-            tmp.put(aa.getKey(), aa.getValue());
-        }
-
-        return tmp;
-    }
+    
 
     public static void main(String[] args) {
         귤고르기 g = new 귤고르기();
