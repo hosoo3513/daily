@@ -8,9 +8,9 @@ import java.util.*;
  * 만약 반대로 (o2.getValue()).compareTo(o1.getValue())로 쓸 경우에는 내림차순이 된다.
  */
 
-public class SortByValue_hashMap {
-    public static HashMap<String, Integer> sortByValue(HashMap<String, Integer> hm) {
-        List<Map.Entry<String, Integer>> list = new LinkedList<>(hm.entrySet());
+public class SortByValue_LinkedHashMap {
+    public static LinkedHashMap<String, Integer> sortByValue(LinkedHashMap<String, Integer> hm) {
+        List<Map.Entry<String, Integer>> list = new ArrayList<Map.Entry<String, Integer>>(hm.entrySet());
 
         // 오름차순
         Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
@@ -20,11 +20,11 @@ public class SortByValue_hashMap {
             }
         });
 
-        HashMap<String, Integer> tmp = new LinkedHashMap<String, Integer>();
-        for (Map.Entry<String, Integer> aa : list) {
-            tmp.put(aa.getKey(), aa.getValue());
+        LinkedHashMap<String, Integer> tmp = new LinkedHashMap<>();
+        for (Map.Entry<String, Integer> l : list) {
+            tmp.put(l.getKey(), l.getValue());
         }
-
+        
         return tmp;
     }
 }
