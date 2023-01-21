@@ -1,4 +1,4 @@
-package algorithm.inflearn.part9;
+package algorithm.inflearn.greedy;
 
 import java.util.Arrays;
 import java.util.Collections;

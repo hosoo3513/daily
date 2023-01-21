@@ -1,4 +1,4 @@
-package algorithm.inflearn.part10;
+package algorithm.inflearn.dynamicProgramming;
 
 import java.util.Scanner;
 
